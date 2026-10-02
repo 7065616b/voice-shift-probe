@@ -1,6 +1,6 @@
 # Workflow Probe — blueprint v1
 
-Status: development. Date: 2026-10-02.
+Status: complete for prototype v0.1. Date: 2026-10-02.
 
 ## Confirmed scope
 
