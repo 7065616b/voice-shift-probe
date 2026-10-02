@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "Desktop: counts, filters, representative evidence images, no page overflow",
+    "Mobile 390 px: no page overflow, cards and filters remain available",
+    "Empty result: explanatory state with result panels hidden",
+    "Execution error: visible warning and separate failure count",
+    "Missing embedded data: explanatory error state",
+    "Public text snapshot: numeric findings and steps without media links"
+  ],
+  "scriptErrors": [],
+  "browser": "151.0.7922.34"
+}

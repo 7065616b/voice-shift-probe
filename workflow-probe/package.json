@@ -1,0 +1,16 @@
+{
+  "name": "workflow-probe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Observe web-app invariants under condition changes, with reproducible browser evidence.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs fixture/server.test.mjs",
+    "probe": "node src/run.mjs --output report",
+    "report": "node tools/build-report.mjs report",
+    "verify": "node tools/verify.mjs report/results.json",
+    "demo": "node tools/demo.mjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

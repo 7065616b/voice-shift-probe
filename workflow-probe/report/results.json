@@ -1,0 +1,2264 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-02T02:05:55.007Z",
+  "repetitions": 3,
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64",
+    "browser": "Chromium 151.0.7922.34",
+    "fixtureUrl": "http://127.0.0.1:54582"
+  },
+  "cases": [
+    {
+      "id": "healthy_SORT_TOTAL_01",
+      "profile": "healthy",
+      "relation": "SORT_TOTAL",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_SORT_TOTAL_01/before.png",
+        "after": "artifacts/healthy_SORT_TOTAL_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_SORT_TOTAL_02",
+      "profile": "healthy",
+      "relation": "SORT_TOTAL",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_SORT_TOTAL_02/before.png",
+        "after": "artifacts/healthy_SORT_TOTAL_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_SORT_TOTAL_03",
+      "profile": "healthy",
+      "relation": "SORT_TOTAL",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_SORT_TOTAL_03/before.png",
+        "after": "artifacts/healthy_SORT_TOTAL_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_SAVE_DUPLICATE_01",
+      "profile": "healthy",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_SAVE_DUPLICATE_01/before.png",
+        "after": "artifacts/healthy_SAVE_DUPLICATE_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_SAVE_DUPLICATE_02",
+      "profile": "healthy",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_SAVE_DUPLICATE_02/before.png",
+        "after": "artifacts/healthy_SAVE_DUPLICATE_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_SAVE_DUPLICATE_03",
+      "profile": "healthy",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_SAVE_DUPLICATE_03/before.png",
+        "after": "artifacts/healthy_SAVE_DUPLICATE_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_REFRESH_PERSIST_01",
+      "profile": "healthy",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_REFRESH_PERSIST_01/before.png",
+        "after": "artifacts/healthy_REFRESH_PERSIST_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_REFRESH_PERSIST_02",
+      "profile": "healthy",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_REFRESH_PERSIST_02/before.png",
+        "after": "artifacts/healthy_REFRESH_PERSIST_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "healthy_REFRESH_PERSIST_03",
+      "profile": "healthy",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/healthy_REFRESH_PERSIST_03/before.png",
+        "after": "artifacts/healthy_REFRESH_PERSIST_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "total-drift_SORT_TOTAL_01",
+      "profile": "total-drift",
+      "relation": "SORT_TOTAL",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 29000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "violation",
+      "message": "정렬 전 32000원, 정렬 후 29000원: 합계 변경",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_SORT_TOTAL_01/before.png",
+        "after": "artifacts/total-drift_SORT_TOTAL_01/after.png",
+        "trace": "artifacts/total-drift_SORT_TOTAL_01/trace.zip"
+      }
+    },
+    {
+      "id": "total-drift_SORT_TOTAL_02",
+      "profile": "total-drift",
+      "relation": "SORT_TOTAL",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 29000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "violation",
+      "message": "정렬 전 32000원, 정렬 후 29000원: 합계 변경",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_SORT_TOTAL_02/before.png",
+        "after": "artifacts/total-drift_SORT_TOTAL_02/after.png",
+        "trace": "artifacts/total-drift_SORT_TOTAL_02/trace.zip"
+      }
+    },
+    {
+      "id": "total-drift_SORT_TOTAL_03",
+      "profile": "total-drift",
+      "relation": "SORT_TOTAL",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 29000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "violation",
+      "message": "정렬 전 32000원, 정렬 후 29000원: 합계 변경",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_SORT_TOTAL_03/before.png",
+        "after": "artifacts/total-drift_SORT_TOTAL_03/after.png",
+        "trace": "artifacts/total-drift_SORT_TOTAL_03/trace.zip"
+      }
+    },
+    {
+      "id": "total-drift_SAVE_DUPLICATE_01",
+      "profile": "total-drift",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_SAVE_DUPLICATE_01/before.png",
+        "after": "artifacts/total-drift_SAVE_DUPLICATE_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "total-drift_SAVE_DUPLICATE_02",
+      "profile": "total-drift",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_SAVE_DUPLICATE_02/before.png",
+        "after": "artifacts/total-drift_SAVE_DUPLICATE_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "total-drift_SAVE_DUPLICATE_03",
+      "profile": "total-drift",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_SAVE_DUPLICATE_03/before.png",
+        "after": "artifacts/total-drift_SAVE_DUPLICATE_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "total-drift_REFRESH_PERSIST_01",
+      "profile": "total-drift",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_REFRESH_PERSIST_01/before.png",
+        "after": "artifacts/total-drift_REFRESH_PERSIST_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "total-drift_REFRESH_PERSIST_02",
+      "profile": "total-drift",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_REFRESH_PERSIST_02/before.png",
+        "after": "artifacts/total-drift_REFRESH_PERSIST_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "total-drift_REFRESH_PERSIST_03",
+      "profile": "total-drift",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/total-drift_REFRESH_PERSIST_03/before.png",
+        "after": "artifacts/total-drift_REFRESH_PERSIST_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "duplicate-save_SORT_TOTAL_01",
+      "profile": "duplicate-save",
+      "relation": "SORT_TOTAL",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_SORT_TOTAL_01/before.png",
+        "after": "artifacts/duplicate-save_SORT_TOTAL_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "duplicate-save_SORT_TOTAL_02",
+      "profile": "duplicate-save",
+      "relation": "SORT_TOTAL",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_SORT_TOTAL_02/before.png",
+        "after": "artifacts/duplicate-save_SORT_TOTAL_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "duplicate-save_SORT_TOTAL_03",
+      "profile": "duplicate-save",
+      "relation": "SORT_TOTAL",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_SORT_TOTAL_03/before.png",
+        "after": "artifacts/duplicate-save_SORT_TOTAL_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "duplicate-save_SAVE_DUPLICATE_01",
+      "profile": "duplicate-save",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 2,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "violation",
+      "message": "두 번 클릭 전 0건, 후 2건: 중복 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_SAVE_DUPLICATE_01/before.png",
+        "after": "artifacts/duplicate-save_SAVE_DUPLICATE_01/after.png",
+        "trace": "artifacts/duplicate-save_SAVE_DUPLICATE_01/trace.zip"
+      }
+    },
+    {
+      "id": "duplicate-save_SAVE_DUPLICATE_02",
+      "profile": "duplicate-save",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 2,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "violation",
+      "message": "두 번 클릭 전 0건, 후 2건: 중복 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_SAVE_DUPLICATE_02/before.png",
+        "after": "artifacts/duplicate-save_SAVE_DUPLICATE_02/after.png",
+        "trace": "artifacts/duplicate-save_SAVE_DUPLICATE_02/trace.zip"
+      }
+    },
+    {
+      "id": "duplicate-save_SAVE_DUPLICATE_03",
+      "profile": "duplicate-save",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 2,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "violation",
+      "message": "두 번 클릭 전 0건, 후 2건: 중복 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_SAVE_DUPLICATE_03/before.png",
+        "after": "artifacts/duplicate-save_SAVE_DUPLICATE_03/after.png",
+        "trace": "artifacts/duplicate-save_SAVE_DUPLICATE_03/trace.zip"
+      }
+    },
+    {
+      "id": "duplicate-save_REFRESH_PERSIST_01",
+      "profile": "duplicate-save",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_REFRESH_PERSIST_01/before.png",
+        "after": "artifacts/duplicate-save_REFRESH_PERSIST_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "duplicate-save_REFRESH_PERSIST_02",
+      "profile": "duplicate-save",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_REFRESH_PERSIST_02/before.png",
+        "after": "artifacts/duplicate-save_REFRESH_PERSIST_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "duplicate-save_REFRESH_PERSIST_03",
+      "profile": "duplicate-save",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/duplicate-save_REFRESH_PERSIST_03/before.png",
+        "after": "artifacts/duplicate-save_REFRESH_PERSIST_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_SORT_TOTAL_01",
+      "profile": "reload-loss",
+      "relation": "SORT_TOTAL",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_SORT_TOTAL_01/before.png",
+        "after": "artifacts/reload-loss_SORT_TOTAL_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_SORT_TOTAL_02",
+      "profile": "reload-loss",
+      "relation": "SORT_TOTAL",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_SORT_TOTAL_02/before.png",
+        "after": "artifacts/reload-loss_SORT_TOTAL_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_SORT_TOTAL_03",
+      "profile": "reload-loss",
+      "relation": "SORT_TOTAL",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_SORT_TOTAL_03/before.png",
+        "after": "artifacts/reload-loss_SORT_TOTAL_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_SAVE_DUPLICATE_01",
+      "profile": "reload-loss",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_SAVE_DUPLICATE_01/before.png",
+        "after": "artifacts/reload-loss_SAVE_DUPLICATE_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_SAVE_DUPLICATE_02",
+      "profile": "reload-loss",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_SAVE_DUPLICATE_02/before.png",
+        "after": "artifacts/reload-loss_SAVE_DUPLICATE_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_SAVE_DUPLICATE_03",
+      "profile": "reload-loss",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_SAVE_DUPLICATE_03/before.png",
+        "after": "artifacts/reload-loss_SAVE_DUPLICATE_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "reload-loss_REFRESH_PERSIST_01",
+      "profile": "reload-loss",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "violation",
+      "message": "새로고침 전 1건, 후 0건: 저장 내역 표시 누락",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_REFRESH_PERSIST_01/before.png",
+        "after": "artifacts/reload-loss_REFRESH_PERSIST_01/after.png",
+        "trace": "artifacts/reload-loss_REFRESH_PERSIST_01/trace.zip"
+      }
+    },
+    {
+      "id": "reload-loss_REFRESH_PERSIST_02",
+      "profile": "reload-loss",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "violation",
+      "message": "새로고침 전 1건, 후 0건: 저장 내역 표시 누락",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_REFRESH_PERSIST_02/before.png",
+        "after": "artifacts/reload-loss_REFRESH_PERSIST_02/after.png",
+        "trace": "artifacts/reload-loss_REFRESH_PERSIST_02/trace.zip"
+      }
+    },
+    {
+      "id": "reload-loss_REFRESH_PERSIST_03",
+      "profile": "reload-loss",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "violation",
+      "message": "새로고침 전 1건, 후 0건: 저장 내역 표시 누락",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/reload-loss_REFRESH_PERSIST_03/before.png",
+        "after": "artifacts/reload-loss_REFRESH_PERSIST_03/after.png",
+        "trace": "artifacts/reload-loss_REFRESH_PERSIST_03/trace.zip"
+      }
+    },
+    {
+      "id": "cosmetic-only_SORT_TOTAL_01",
+      "profile": "cosmetic-only",
+      "relation": "SORT_TOTAL",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_SORT_TOTAL_01/before.png",
+        "after": "artifacts/cosmetic-only_SORT_TOTAL_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_SORT_TOTAL_02",
+      "profile": "cosmetic-only",
+      "relation": "SORT_TOTAL",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_SORT_TOTAL_02/before.png",
+        "after": "artifacts/cosmetic-only_SORT_TOTAL_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_SORT_TOTAL_03",
+      "profile": "cosmetic-only",
+      "relation": "SORT_TOTAL",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "notebook",
+          "cable",
+          "microphone"
+        ]
+      },
+      "status": "pass",
+      "message": "정렬 전 32000원, 정렬 후 32000원: 합계 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "항목 순서를 바꾸기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_SORT_TOTAL_03/before.png",
+        "after": "artifacts/cosmetic-only_SORT_TOTAL_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_SAVE_DUPLICATE_01",
+      "profile": "cosmetic-only",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_SAVE_DUPLICATE_01/before.png",
+        "after": "artifacts/cosmetic-only_SAVE_DUPLICATE_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_SAVE_DUPLICATE_02",
+      "profile": "cosmetic-only",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_SAVE_DUPLICATE_02/before.png",
+        "after": "artifacts/cosmetic-only_SAVE_DUPLICATE_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_SAVE_DUPLICATE_03",
+      "profile": "cosmetic-only",
+      "relation": "SAVE_DUPLICATE",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 0,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ],
+        "saveRequests": 2
+      },
+      "status": "pass",
+      "message": "두 번 클릭 전 0건, 후 1건: 한 건만 저장",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "변경 전 화면과 수치 기록",
+        "같은 주문 의도로 저장 버튼을 빠르게 두 번 누르기",
+        "실제 저장 요청 2건 확인",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_SAVE_DUPLICATE_03/before.png",
+        "after": "artifacts/cosmetic-only_SAVE_DUPLICATE_03/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_REFRESH_PERSIST_01",
+      "profile": "cosmetic-only",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 1,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_REFRESH_PERSIST_01/before.png",
+        "after": "artifacts/cosmetic-only_REFRESH_PERSIST_01/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_REFRESH_PERSIST_02",
+      "profile": "cosmetic-only",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 2,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_REFRESH_PERSIST_02/before.png",
+        "after": "artifacts/cosmetic-only_REFRESH_PERSIST_02/after.png",
+        "trace": null
+      }
+    },
+    {
+      "id": "cosmetic-only_REFRESH_PERSIST_03",
+      "profile": "cosmetic-only",
+      "relation": "REFRESH_PERSIST",
+      "repetition": 3,
+      "baselinePassed": true,
+      "baseline": {
+        "initialTotal": 32000,
+        "initialOrderCount": 0,
+        "savedOrderCount": 1,
+        "pendingCount": 0
+      },
+      "before": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "after": {
+        "total": 32000,
+        "orderCount": 1,
+        "pendingCount": 0,
+        "itemOrder": [
+          "microphone",
+          "cable",
+          "notebook"
+        ]
+      },
+      "status": "pass",
+      "message": "새로고침 전 1건, 후 1건: 저장 내역 표시 유지",
+      "steps": [
+        "새 세션에서 장바구니 열기",
+        "초기 합계와 주문 수 관찰",
+        "저장 버튼을 한 번 누르기",
+        "새로운 세션에서 장바구니 열기",
+        "주문을 한 번 저장하고 완료 표시를 기다리기",
+        "변경 전 화면과 수치 기록",
+        "화면 새로고침 후 데이터 다시 불러오기",
+        "변경 후 화면과 수치 기록"
+      ],
+      "artifacts": {
+        "before": "artifacts/cosmetic-only_REFRESH_PERSIST_03/before.png",
+        "after": "artifacts/cosmetic-only_REFRESH_PERSIST_03/after.png",
+        "trace": null
+      }
+    }
+  ]
+}
