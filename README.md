@@ -1,5 +1,7 @@
 # Voice Shift Probe
 
+[![자동 검증](https://github.com/7065616b/voice-shift-probe/actions/workflows/verify.yml/badge.svg)](https://github.com/7065616b/voice-shift-probe/actions/workflows/verify.yml)
+
 **게임에서 봇을 알아채는 관찰을 음성 탐지 실험으로 옮긴 프로젝트.** 같은 소리를 느리게·빠르게 처리했을 때, 사람과 AI 음성을 구별하는 단서가 드러나는지 비교합니다.
 
 이 저장소의 최종 연구 구현은 **원본 / 0.8배 / 1.0배 재처리 / 1.25배를 비교하는 탐지 래퍼 v0.1**입니다. 사전 학습된 DF-Arena의 음성 판별기를 고정하고, 세 조건의 점수를 평균하는 후보와 시간적 반복 특징을 함께 관찰합니다. 새 대형 신경망을 학습하지 않았으며, 배포용 판별 기준은 검증하지 않았습니다.
@@ -59,7 +61,7 @@ voice-shift-probe audit --evidence evidence
 python -m unittest discover -s tests -v
 ```
 
-첫 명령은 저장된 256행의 점수로 EER·AUC·오탐을 다시 계산하고 원시 JSON/CSV, 실험 조건 및 파일 지문을 대조합니다. GPU와 원본 음원 다운로드가 필요 없습니다. 변환 통합 테스트에는 별도로 FFmpeg가 필요합니다.
+검산 명령은 저장된 256행의 점수로 EER·AUC·오탐을 다시 계산하고 원시 JSON/CSV, 실험 조건 및 파일 지문을 대조합니다. GPU와 원본 음원 다운로드가 필요 없습니다. 변환 통합 테스트에는 별도로 FFmpeg가 필요합니다.
 
 [파일별 결과를 보는 화면](demo/index.html)은 내려받아 브라우저에서 열 수 있습니다. 로컬 미리보기는 `python -m http.server 8000` 실행 후 `http://localhost:8000/demo/`로 접속합니다.
 
@@ -112,3 +114,4 @@ voice-shift-probe predict \
 - 사람 오탐이 늘어난 후보를 실사용 개선 모델로 채택하지 않았습니다.
 
 다음 검증은 새로운 화자·생성기, 다른 배속 변환 방식, 동일한 검사 구간 수를 사용한 비교입니다. [포트폴리오 소개문](docs/portfolio.md) · [모델 카드](docs/model-card.md) · [외부 구성요소 출처](THIRD_PARTY_NOTICES.md)
+
