@@ -1,0 +1,3 @@
+# Archived fingerprints refer to original bytes; never normalize their line endings.
+evidence/frozen/** -text
+*.png binary
