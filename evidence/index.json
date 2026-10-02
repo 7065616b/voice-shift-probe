@@ -1,0 +1,24 @@
+{
+  "release": "0.1.0",
+  "experiment_date": "2026-09-29",
+  "release_prepared": "2026-10-02",
+  "statement": "Hashes preserve exported historical bytes; they do not independently attest experiment execution.",
+  "sha256": {
+    "frozen/additional_gpu_analysis.json": "450b01fae9140e327d3c47d20eb8ad64b1e782cb3ac90d2c0d8bef7461845cba",
+    "frozen/analyze_patterns.py": "674d6c2439e3c63245817e1f3626914e244b31692b00d1ed1196da0a78f325a4",
+    "frozen/gpu_inference.py": "d8b58b778720838b0a19ca6db849a0c585e3e3647f0031dcb6b05b9a7691e2ab",
+    "frozen/gpu_runner_checks.json": "d4b370c6a14c16764bf36ae24e6eb4db8b7d3f3abfb8cc6cbde7f90d4bbfc938",
+    "frozen/independent_review.json": "3874346ed77f3116ec260e6dd18eb056fbe656bd56b540937286b16f5195560b",
+    "frozen/pattern_checks.json": "3886e760fbc303fdab4ced17912059069815b446721b9a4ef706bcd1e9986527",
+    "frozen/pattern_features.csv": "ae12da08a7b0c2da84e41fbaf60ff1d8f99b34d9688b7031f03bef948a46d108",
+    "frozen/pattern_summary.json": "75e7b11e758b4dc1bbb7e1b1c7f030e61299b7f9aaf83b3f0c021c052d8fa83a",
+    "frozen/prep_manifest.json": "640ca5b34ab254f80d1e38cd7d1606077f405b0d8cee9f052e187969f5f8d8cf",
+    "frozen/prep_sanity.json": "b41f466788091ff4d8a635c64e2b24a145d9b126725e71b878a65940d9c8f7a2",
+    "frozen/prepare_audio.py": "8cd04336bb22cc56a2302c59b846f6c9aec9923b6bf6fce03c54137849b8ebae",
+    "frozen/protocol.json": "f88fae097badc2004b36d01a247929797a0ec2f93237e983775ed51ca6a3b985",
+    "frozen/results.csv": "99eead0a0a049280db21062185bf5897cce5f520f1d42b54568ba2dd91662fda",
+    "frozen/results.json": "31c9d1cfa78fbb3bebce4bee48986fabb6d2ad21b9bbb6015295a2f38e4c4d69",
+    "frozen/source_locators.json": "8424260e5f281c9280d5959f6a74ae8b7640453d793a0a9f1c2bf78e00526bdc",
+    "frozen/summary.json": "52e648997b6be16c6dc04246b3550f2d1c4eb4259f45b559d837d62c44c4e26f"
+  }
+}

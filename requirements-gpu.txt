@@ -1,0 +1,12 @@
+# Optional environment for the separately obtained official baseline adapter.
+# Use Python 3.11; select an appropriate CUDA PyTorch distribution for your host.
+numpy==1.26.4
+scipy==1.15.3
+torch==2.7.1
+torchaudio==2.7.1
+transformers==4.57.6
+accelerate>=1,<2
+librosa==0.11.0
+demucs==4.0.1
+tqdm>=4.66,<5
+einops>=0.8,<1

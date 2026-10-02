@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-shift-probe"
+version = "0.1.0"
+description = "Paired tempo interventions and reproducible audits of audio deepfake detector behavior"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2"]
+
+[project.scripts]
+voice-shift-probe = "voice_shift_probe.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

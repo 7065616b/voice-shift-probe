@@ -1,0 +1,105 @@
+{
+  "name": "full_audio_speed_probe_v1_sanity",
+  "manifest_sha256": "640ca5b34ab254f80d1e38cd7d1606077f405b0d8cee9f052e187969f5f8d8cf",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "known_sine_440hz_and_impulse_controls": {
+    "0.8": {
+      "tone_seconds": 6.2474375,
+      "expected_seconds": 6.25,
+      "tone_duration_error_seconds": 0.002562499999999801,
+      "dominant_frequency_hz": 440.0217115976117,
+      "tone_frequency_error_hz": 0.02171159761172703,
+      "impulse_seconds": 6.2031875,
+      "impulse_peak": 0.49923720955848694,
+      "transient_events": [
+        {
+          "original_seconds": 1.0,
+          "expected_seconds": 1.25,
+          "observed_seconds": 1.2308125,
+          "error_seconds": 0.019187499999999913,
+          "peak": 0.49923720955848694
+        },
+        {
+          "original_seconds": 3.0,
+          "expected_seconds": 3.75,
+          "observed_seconds": 3.728,
+          "error_seconds": 0.021999999999999797,
+          "peak": 0.49923229217529297
+        }
+      ],
+      "max_transient_timing_error_seconds": 0.021999999999999797,
+      "within_transient_timing_tolerance_50ms": true,
+      "within_duration_tolerance": true,
+      "within_pitch_tolerance_5hz": true,
+      "finite": true,
+      "rate1_sample_equal_to_input": null
+    },
+    "1.0": {
+      "tone_seconds": 5.0,
+      "expected_seconds": 5.0,
+      "tone_duration_error_seconds": 0.0,
+      "dominant_frequency_hz": 440.0,
+      "tone_frequency_error_hz": 0.0,
+      "impulse_seconds": 4.968,
+      "impulse_peak": 0.4994592070579529,
+      "transient_events": [
+        {
+          "original_seconds": 1.0,
+          "expected_seconds": 1.0,
+          "observed_seconds": 0.968,
+          "error_seconds": 0.03200000000000003,
+          "peak": 0.49945586919784546
+        },
+        {
+          "original_seconds": 3.0,
+          "expected_seconds": 3.0,
+          "observed_seconds": 2.968,
+          "error_seconds": 0.03200000000000003,
+          "peak": 0.4994592070579529
+        }
+      ],
+      "max_transient_timing_error_seconds": 0.03200000000000003,
+      "within_transient_timing_tolerance_50ms": true,
+      "within_duration_tolerance": true,
+      "within_pitch_tolerance_5hz": true,
+      "finite": true,
+      "rate1_sample_equal_to_input": false
+    },
+    "1.25": {
+      "tone_seconds": 4.001375,
+      "expected_seconds": 4.0,
+      "tone_duration_error_seconds": 0.0013750000000003482,
+      "dominant_frequency_hz": 439.8331667298611,
+      "tone_frequency_error_hz": 0.16683327013890903,
+      "impulse_seconds": 3.976,
+      "impulse_peak": 0.49945586919784546,
+      "transient_events": [
+        {
+          "original_seconds": 1.0,
+          "expected_seconds": 0.8,
+          "observed_seconds": 0.776,
+          "error_seconds": 0.02400000000000002,
+          "peak": 0.49945586919784546
+        },
+        {
+          "original_seconds": 3.0,
+          "expected_seconds": 2.4,
+          "observed_seconds": 2.376,
+          "error_seconds": 0.02400000000000002,
+          "peak": 0.49945586919784546
+        }
+      ],
+      "max_transient_timing_error_seconds": 0.02400000000000002,
+      "within_transient_timing_tolerance_50ms": true,
+      "within_duration_tolerance": true,
+      "within_pitch_tolerance_5hz": true,
+      "finite": true,
+      "rate1_sample_equal_to_input": null
+    }
+  },
+  "all_control_duration_and_pitch_checks_passed": true,
+  "all_audio_duration_and_float_range_checks_passed": true,
+  "rate1_identical_to_decoded_count": 0,
+  "source_count": 64,
+  "violation_count": 0
+}

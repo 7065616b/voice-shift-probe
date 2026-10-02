@@ -1,0 +1,107 @@
+{
+  "synthetic_period_seconds": 0.5,
+  "controls": {
+    "0.8": {
+      "repeated": {
+        "frame_count": 747,
+        "log_rms_acf_max": 0.9978881690434204,
+        "log_rms_acf_median": 0.008664771615144945,
+        "log_rms_acf_contrast": 0.9892233974282755,
+        "log_rms_peak_lag_original_seconds": 1.0,
+        "log_spectral_shape_acf_max": 0.9618218525987542,
+        "log_spectral_shape_acf_median": -0.13464582572286132,
+        "log_spectral_shape_acf_contrast": 1.0964676783216154,
+        "log_spectral_shape_peak_lag_original_seconds": 1.0,
+        "log_rms_acf_at_original_0p5s": 0.989637549139431,
+        "log_spectral_shape_acf_at_original_0p5s": 0.9305461207641107,
+        "log_rms_excess_vs_random": 0.8418214345112724,
+        "log_spectral_shape_excess_vs_random": 0.9371632513185405
+      },
+      "random": {
+        "frame_count": 745,
+        "log_rms_acf_max": 0.15606673453214798,
+        "log_rms_acf_median": -0.0051633548540468985,
+        "log_rms_acf_contrast": 0.16123008938619487,
+        "log_rms_peak_lag_original_seconds": 0.54,
+        "log_spectral_shape_acf_max": 0.02465860128021373,
+        "log_spectral_shape_acf_median": -0.002415911536157288,
+        "log_spectral_shape_acf_contrast": 0.027074512816371018,
+        "log_spectral_shape_peak_lag_original_seconds": 1.99,
+        "log_rms_acf_at_original_0p5s": -0.07607514490006499,
+        "log_spectral_shape_acf_at_original_0p5s": -0.009235611704392056
+      }
+    },
+    "1.0": {
+      "repeated": {
+        "frame_count": 598,
+        "log_rms_acf_max": 0.9998658433900434,
+        "log_rms_acf_median": 0.009460395898610353,
+        "log_rms_acf_contrast": 0.990405447491433,
+        "log_rms_peak_lag_original_seconds": 0.5,
+        "log_spectral_shape_acf_max": 0.9997843899174554,
+        "log_spectral_shape_acf_median": -0.13174472944162005,
+        "log_spectral_shape_acf_contrast": 1.1315291193590755,
+        "log_spectral_shape_peak_lag_original_seconds": 0.5,
+        "log_rms_acf_at_original_0p5s": 0.9998658433900434,
+        "log_spectral_shape_acf_at_original_0p5s": 0.9997843899174554,
+        "log_rms_excess_vs_random": 0.8626254762426828,
+        "log_spectral_shape_excess_vs_random": 0.9777722134674871
+      },
+      "random": {
+        "frame_count": 598,
+        "log_rms_acf_max": 0.13724036714736057,
+        "log_rms_acf_median": -0.006021183641640163,
+        "log_rms_acf_contrast": 0.14326155078900074,
+        "log_rms_peak_lag_original_seconds": 1.87,
+        "log_spectral_shape_acf_max": 0.02201217644996834,
+        "log_spectral_shape_acf_median": -0.0013444274519633132,
+        "log_spectral_shape_acf_contrast": 0.023356603901931654,
+        "log_spectral_shape_peak_lag_original_seconds": 0.35000000000000003,
+        "log_rms_acf_at_original_0p5s": -0.0005005605587827732,
+        "log_spectral_shape_acf_at_original_0p5s": -0.008553582384240034
+      }
+    },
+    "1.25": {
+      "repeated": {
+        "frame_count": 478,
+        "log_rms_acf_max": 0.9973078668764558,
+        "log_rms_acf_median": 0.009695689340095744,
+        "log_rms_acf_contrast": 0.98761217753636,
+        "log_rms_peak_lag_original_seconds": 1.0,
+        "log_spectral_shape_acf_max": 0.9773510454771617,
+        "log_spectral_shape_acf_median": -0.13884993567246334,
+        "log_spectral_shape_acf_contrast": 1.116200981149625,
+        "log_spectral_shape_peak_lag_original_seconds": 1.0,
+        "log_rms_acf_at_original_0p5s": 0.988330692166531,
+        "log_spectral_shape_acf_at_original_0p5s": 0.904075298523014,
+        "log_rms_excess_vs_random": 0.8315325978032945,
+        "log_spectral_shape_excess_vs_random": 0.9501244243273698
+      },
+      "random": {
+        "frame_count": 480,
+        "log_rms_acf_max": 0.16577526907316134,
+        "log_rms_acf_median": -0.01565237864156132,
+        "log_rms_acf_contrast": 0.18142764771472267,
+        "log_rms_peak_lag_original_seconds": 0.52,
+        "log_spectral_shape_acf_max": 0.0272266211497919,
+        "log_spectral_shape_acf_median": -0.0014617934558830857,
+        "log_spectral_shape_acf_contrast": 0.028688414605674985,
+        "log_spectral_shape_peak_lag_original_seconds": 1.3,
+        "log_rms_acf_at_original_0p5s": -0.003907733281972431,
+        "log_spectral_shape_acf_at_original_0p5s": -0.010295076100735158
+      }
+    }
+  },
+  "criteria": {
+    "same_signal_reanalysis_exact": true,
+    "repeated_envelope_exceeds_random_at_all_rates_by_0p15": true,
+    "repeated_spectrum_exceeds_random_at_all_rates_by_0p15": true,
+    "repeated_0p5s_lag_remains_strong_at_all_rates": true,
+    "maximum_lag_is_a_half_second_multiple_at_all_rates": true
+  },
+  "passed": true,
+  "manifest_sha256": "640ca5b34ab254f80d1e38cd7d1606077f405b0d8cee9f052e187969f5f8d8cf",
+  "features_sha256": "ae12da08a7b0c2da84e41fbaf60ff1d8f99b34d9688b7031f03bef948a46d108",
+  "source_pairing_exact": true,
+  "all_numeric_features_finite": true
+}

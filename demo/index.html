@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voice Shift Probe — 실험 증빙</title>
+<style>
+body{margin:0;background:#f5f7fa;color:#172332;font:16px/1.65 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:44px 24px}h1{font-size:36px;margin:8px 0}h2{font-size:21px;margin-top:34px}.eyebrow{font-size:13px;letter-spacing:.12em;color:#32646e}.intro{max-width:760px;color:#536171}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.card{border:1px solid #dce3ec;background:white;padding:20px;border-radius:12px}.card strong{display:block;font-size:29px}.warning{padding:18px 22px;background:#fff5e7;border-left:4px solid #c47e27;border-radius:4px}table{width:100%;border-collapse:collapse;background:white;font-variant-numeric:tabular-nums}th,td{text-align:left;padding:13px;border-bottom:1px solid #e0e6ed}th{background:#eaf0f5;font-size:14px}select{font:inherit;padding:8px;max-width:100%;border:1px solid #c2ccd8;border-radius:6px}.table-wrap{overflow:auto}.note{font-size:14px;color:#5f6c7b}.quote{font-size:22px;border-left:3px solid #32646e;padding-left:18px}a{color:#1b607b}.good{color:#167153}.bad{color:#a55024}footer{margin-top:36px;color:#5f6c7b;font-size:14px}@media(max-width:650px){.cards{grid-template-columns:1fr}h1{font-size:28px}main{padding:24px 16px}th,td{padding:10px;font-size:13px}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">RESEARCH EVIDENCE · 2026-09-29</div>
+<h1>조건을 바꾸면, 차이가 드러날까?</h1>
+<p class="intro">게임에서 평소 행동으로는 구별하지 못한 봇을 특수한 상황에서 알아챈 관찰을 음성 탐지에 옮겼습니다. 같은 음성의 배속을 바꾸고 모델 점수와 반복 특징을 비교했습니다.</p>
+<div class="cards"><div class="card">원본 음성<strong>64개</strong><span class="note">사람 32 · AI 32</span></div><div class="card">파생 입력<strong>256개</strong><span class="note">원본 · 0.8 · 1.0 · 1.25</span></div><div class="card">실험 환경<strong>Tesla T4</strong><span class="note">무료 Colab · 고정 모델</span></div></div>
+<div class="warning"><strong>개선 신호와 오탐 악화가 함께 나타났습니다.</strong><br>평균 EER은 낮아졌지만 기준 0.5에서 사람 오탐은 늘었습니다. 호흡이나 AI 고유 반복을 입증한 결과는 아닙니다.</div>
+<h2>전체 결과</h2><div class="table-wrap"><table><thead><tr><th>처리 조건</th><th>EER ↓</th><th>AUC ↑</th><th>사람 오탐 / 32</th><th>AI 누락 / 32</th></tr></thead><tbody id="summary"></tbody></table></div>
+<p class="note">EER은 판정 기준을 움직이며 평가합니다. 오탐·누락은 고정 기준 0.5입니다. 점수는 보정된 AI 확률이 아닙니다.</p>
+<h2>같은 음성에서 어떻게 달라졌나</h2>
+<label for="source">원본 선택</label><br><select id="source"></select>
+<p id="identity" class="note"></p><div class="table-wrap"><table><thead><tr><th>조건</th><th>AI 점수</th><th>원본 대비 변화</th><th>검사 구간 수</th><th>길이</th></tr></thead><tbody id="detail"></tbody></table></div>
+<p class="note">1.0배도 변환을 통과합니다. 속도를 바꾸지 않아도 점수가 달라질 수 있습니다. 느린 음성은 검사 구간 수가 늘어 최댓값 점수에 영향을 줄 수 있습니다.</p>
+<h2>재현 범위</h2>
+<p>이 화면은 저장된 실제 GPU 결과를 표시합니다. 원음 재생이나 새로운 모델 추론은 하지 않습니다. 원본 64개는 이전에 탐색한 공개 포르투갈어 자료이며 화자·대본 독립성을 확인하지 못했습니다.</p>
+<p>저장소에서 <code>voice-shift-probe audit --evidence evidence</code>를 실행하면 GPU 없이 지표와 파일 지문을 대조할 수 있습니다.</p>
+<footer>사용자: 문제 관찰·가설 제안 · Codex: 구현·실험·검산 지원 · 기반 모델: 원 제작자 DF-Arena<br><a href="../README.md">프로젝트 설명</a> · <a href="../evidence/frozen/results.csv">원시 결과 CSV</a> · <a href="../docs/evidence-guide.md">주장과 증빙</a></footer>
+</main><script src="data.js"></script><script>
+const names={original:'원본','0.8':'느리게 0.8배','1.0':'1.0배 재처리 대조','1.25':'빠르게 1.25배',predeclared_mean_original_0p8_1p25:'원본·0.8·1.25 평균'};
+const addRow=(parent,values)=>{const row=document.createElement('tr');for(const value of values){const td=document.createElement('td');td.textContent=value;row.append(td)}parent.append(row)};
+for(const [key,m] of Object.entries(EXPERIMENT.metrics)){addRow(document.getElementById('summary'),[names[key],(m.eer*100).toFixed(3)+'%',m.auc.toFixed(4),m.false_positive,m.false_negative])}
+const grouped=new Map();for(const row of EXPERIMENT.rows){if(!grouped.has(row.id))grouped.set(row.id,[]);grouped.get(row.id).push(row)}
+const selector=document.getElementById('source');for(const [id,rows] of grouped){const option=document.createElement('option');option.value=id;option.textContent=(rows[0].label===0?'사람':'AI · '+rows[0].generator)+' — '+id;selector.append(option)}
+function update(){const rows=grouped.get(selector.value),original=rows.find(r=>r.variant==='original');document.getElementById('identity').textContent='자료 정답: '+(original.label===0?'사람':'AI · '+original.generator)+' · 같은 원본의 네 조건 비교';const detail=document.getElementById('detail');detail.replaceChildren();for(const row of rows){const delta=row.raw_fake-original.raw_fake;addRow(detail,[names[row.variant],row.raw_fake.toFixed(6),(delta>=0?'+':'')+delta.toFixed(6),row.segment_count,row.duration_seconds.toFixed(2)+'초'])}}
+selector.addEventListener('change',update);update();
+</script></body></html>

@@ -1,0 +1,334 @@
+{
+  "status": "verified_complete",
+  "scope": "Frozen raw-waveform DF-Arena voice diagnostic on 64 previously explored external recordings; not the full contest pipeline or ADS",
+  "input_sources": 64,
+  "views": 256,
+  "verification": {
+    "manifest_protocol_runner_baseline_hashes": "passed",
+    "all_256_audio_hashes_and_window_counts": "passed",
+    "results_json_csv_equality": "passed",
+    "summary_metrics_and_shifts_recomputed_independently": "passed",
+    "result_file_sha256": {
+      "results.json": "31c9d1cfa78fbb3bebce4bee48986fabb6d2ad21b9bbb6015295a2f38e4c4d69",
+      "results.csv": "99eead0a0a049280db21062185bf5897cce5f520f1d42b54568ba2dd91662fda",
+      "summary.json": "52e648997b6be16c6dc04246b3550f2d1c4eb4259f45b559d837d62c44c4e26f"
+    }
+  },
+  "metrics": {
+    "original": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 28,
+      "false_negative": 0,
+      "true_negative": 4,
+      "false_positive_rate": 0.875,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5625,
+      "eer": 0.21875,
+      "auc": 0.912109375
+    },
+    "0.8": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 32,
+      "false_negative": 0,
+      "true_negative": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5,
+      "eer": 0.15625,
+      "auc": 0.923828125
+    },
+    "1.0": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 30,
+      "false_negative": 0,
+      "true_negative": 2,
+      "false_positive_rate": 0.9375,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.53125,
+      "eer": 0.21875,
+      "auc": 0.8994140625
+    },
+    "1.25": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 32,
+      "false_negative": 0,
+      "true_negative": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5,
+      "eer": 0.1875,
+      "auc": 0.8974609375
+    },
+    "predeclared_mean_original_0p8_1p25": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 32,
+      "false_negative": 0,
+      "true_negative": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5,
+      "eer": 0.15625,
+      "auc": 0.9423828125
+    }
+  },
+  "paired_shifts_vs_original": {
+    "0.8": {
+      "mean_absolute": 0.05384270008653402,
+      "max_absolute": 0.6002530157566071,
+      "mean_signed_real": 0.10637756437063217,
+      "mean_signed_ai": -0.00016892142593860626
+    },
+    "1.0": {
+      "mean_absolute": 0.02889902051538229,
+      "max_absolute": 0.356778621673584,
+      "mean_signed_real": 0.005894362926483154,
+      "mean_signed_ai": -2.0390376448631287e-05
+    },
+    "1.25": {
+      "mean_absolute": 0.06541433837264776,
+      "max_absolute": 0.6333599984645844,
+      "mean_signed_real": 0.13023528642952442,
+      "mean_signed_ai": 1.4275312423706055e-05
+    }
+  },
+  "comparison_vs_original": {
+    "0.8": {
+      "eer_change_from_original": -0.0625,
+      "auc_change_from_original": 0.01171875,
+      "false_alarms_change": 4,
+      "ai_misses_change": 0
+    },
+    "1.0": {
+      "eer_change_from_original": 0.0,
+      "auc_change_from_original": -0.0126953125,
+      "false_alarms_change": 2,
+      "ai_misses_change": 0
+    },
+    "1.25": {
+      "eer_change_from_original": -0.03125,
+      "auc_change_from_original": -0.0146484375,
+      "false_alarms_change": 4,
+      "ai_misses_change": 0
+    },
+    "predeclared_mean_original_0p8_1p25": {
+      "eer_change_from_original": -0.0625,
+      "auc_change_from_original": 0.0302734375,
+      "false_alarms_change": 4,
+      "ai_misses_change": 0
+    }
+  },
+  "changed_cases_at_fixed_0p5": {
+    "0.8": {
+      "corrected_count": 0,
+      "new_error_count": 4,
+      "net_errors_reduced": -4,
+      "corrected": [],
+      "new_errors": [
+        {
+          "id": "brep_human_test-00000-of-00002_00436",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3602854907512665,
+          "view_score": 0.8736250400543213,
+          "score_change": 0.5133395493030548
+        },
+        {
+          "id": "brep_human_test-00000-of-00002_00481",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.44430601596832275,
+          "view_score": 0.8422634601593018,
+          "score_change": 0.397957444190979
+        },
+        {
+          "id": "brep_human_test-00001-of-00002_00166",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3529717028141022,
+          "view_score": 0.9532247185707092,
+          "score_change": 0.6002530157566071
+        },
+        {
+          "id": "brep_human_test-00001-of-00002_00188",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.34625113010406494,
+          "view_score": 0.748875617980957,
+          "score_change": 0.4026244878768921
+        }
+      ]
+    },
+    "1.0": {
+      "corrected_count": 0,
+      "new_error_count": 2,
+      "net_errors_reduced": -2,
+      "corrected": [],
+      "new_errors": [
+        {
+          "id": "brep_human_test-00000-of-00002_00436",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3602854907512665,
+          "view_score": 0.6687062382698059,
+          "score_change": 0.30842074751853943
+        },
+        {
+          "id": "brep_human_test-00000-of-00002_00481",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.44430601596832275,
+          "view_score": 0.705600380897522,
+          "score_change": 0.2612943649291992
+        }
+      ]
+    },
+    "1.25": {
+      "corrected_count": 0,
+      "new_error_count": 4,
+      "net_errors_reduced": -4,
+      "corrected": [],
+      "new_errors": [
+        {
+          "id": "brep_human_test-00000-of-00002_00436",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3602854907512665,
+          "view_score": 0.9910615086555481,
+          "score_change": 0.6307760179042816
+        },
+        {
+          "id": "brep_human_test-00000-of-00002_00481",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.44430601596832275,
+          "view_score": 0.9534487724304199,
+          "score_change": 0.5091427564620972
+        },
+        {
+          "id": "brep_human_test-00001-of-00002_00166",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3529717028141022,
+          "view_score": 0.9863317012786865,
+          "score_change": 0.6333599984645844
+        },
+        {
+          "id": "brep_human_test-00001-of-00002_00188",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.34625113010406494,
+          "view_score": 0.7139822244644165,
+          "score_change": 0.36773109436035156
+        }
+      ]
+    },
+    "predeclared_mean_original_0p8_1p25": {
+      "corrected_count": 0,
+      "new_error_count": 4,
+      "net_errors_reduced": -4,
+      "corrected": [],
+      "new_errors": [
+        {
+          "id": "brep_human_test-00000-of-00002_00436",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3602854907512665,
+          "view_score": 0.7416573464870453,
+          "score_change": 0.3813718557357788
+        },
+        {
+          "id": "brep_human_test-00000-of-00002_00481",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.44430601596832275,
+          "view_score": 0.7466727495193481,
+          "score_change": 0.3023667335510254
+        },
+        {
+          "id": "brep_human_test-00001-of-00002_00166",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.3529717028141022,
+          "view_score": 0.7641760408878326,
+          "score_change": 0.41120433807373047
+        },
+        {
+          "id": "brep_human_test-00001-of-00002_00188",
+          "label": 0,
+          "generator": "human",
+          "original_score": 0.34625113010406494,
+          "view_score": 0.6030363241831461,
+          "score_change": 0.2567851940790812
+        }
+      ]
+    }
+  },
+  "workload": {
+    "original": {
+      "total_elapsed_seconds": 73.98456512100006,
+      "median_elapsed_seconds_per_source": 0.798830382999995,
+      "segment_passes": 229,
+      "max_segments_for_one_source": 5,
+      "tiled_sources": 0
+    },
+    "0.8": {
+      "total_elapsed_seconds": 65.41942922600197,
+      "median_elapsed_seconds_per_source": 0.9999635770000168,
+      "segment_passes": 280,
+      "max_segments_for_one_source": 7,
+      "tiled_sources": 0
+    },
+    "1.0": {
+      "total_elapsed_seconds": 52.755563772001324,
+      "median_elapsed_seconds_per_source": 0.7866620755000895,
+      "segment_passes": 228,
+      "max_segments_for_one_source": 5,
+      "tiled_sources": 0
+    },
+    "1.25": {
+      "total_elapsed_seconds": 43.35546251600067,
+      "median_elapsed_seconds_per_source": 0.7332686889999422,
+      "segment_passes": 188,
+      "max_segments_for_one_source": 4,
+      "tiled_sources": 0
+    }
+  },
+  "runtime_runs": [
+    {
+      "python": "3.11.15",
+      "numpy": "1.26.4",
+      "torch": "2.7.1+cu128",
+      "transformers": "4.57.6",
+      "gpu": "Tesla T4",
+      "cuda_runtime": "12.8",
+      "cudnn": 90701,
+      "float_precision": "FP32 with TF32 disabled"
+    }
+  ],
+  "limitations": [
+    "The 64 sources and generator families were previously examined; source and speaker independence is unverified.",
+    "The 1.0 atempo view is a processed control and can change model scores even without a speed change.",
+    "Longer 0.8 views can have more max-pooled model windows than originals, affecting scores independently of voice identity.",
+    "No confidence interval is treated as an independent test result, and no contest ADS is inferred."
+  ]
+}

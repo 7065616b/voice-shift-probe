@@ -1,0 +1,58 @@
+{
+  "scope": "Independent read-only audit of temporal pattern features; no detector inference",
+  "source_sha256": {
+    "analyze_patterns.py": "674d6c2439e3c63245817e1f3626914e244b31692b00d1ed1196da0a78f325a4",
+    "prep_manifest.json": "640ca5b34ab254f80d1e38cd7d1606077f405b0d8cee9f052e187969f5f8d8cf",
+    "pattern_features.csv": "ae12da08a7b0c2da84e41fbaf60ff1d8f99b34d9688b7031f03bef948a46d108",
+    "pattern_summary.json": "75e7b11e758b4dc1bbb7e1b1c7f030e61299b7f9aaf83b3f0c021c052d8fa83a",
+    "pattern_checks.json": "3886e760fbc303fdab4ced17912059069815b446721b9a4ef706bcd1e9986527"
+  },
+  "raw_recalculation": {
+    "selected_per_generator": 2,
+    "source_count": 6,
+    "view_count": 24,
+    "method": "Independent direct overlap dot-products at interpolated lags, with fresh waveform FFT/front-end calculation; never called analyze_patterns features or normalized_acf",
+    "max_absolute_saved_feature_error": 2.9976021664879227e-15,
+    "selected_ids": [
+      "brep_human_test-00000-of-00002_00436",
+      "brep_human_test-00000-of-00002_00482",
+      "brep_f5tts_test-00000-of-00007_00376",
+      "brep_f5tts_test-00000-of-00007_00360",
+      "brep_yourtts_test-00006-of-00007_00346",
+      "brep_yourtts_test-00006-of-00007_00348"
+    ]
+  },
+  "all_row_and_group_recalculation": {
+    "source_count": 64,
+    "derived_rows": 256,
+    "max_paired_delta_error": 0.0,
+    "max_group_stat_error": 0.0,
+    "hashes_match": true
+  },
+  "time_alignment": {
+    "nominal_rate_formula": "original-time lag / nominal playback rate",
+    "max_relative_duration_rate_error": 0.005444837976423145,
+    "worst_case_id": "brep_yourtts_test-00006-of-00007_00305",
+    "worst_case_rate": "0.8",
+    "assessment": "Formula direction is correct. Duration-based mismatch reaches about 0.54%; around a 2 s original lag this is about 11 ms in original-time units. FFmpeg transient offsets up to 32 ms were previously recorded; peak lag at 10 ms grid is sensitive to these shifts."
+  },
+  "interpretation": {
+    "median_log_rms_acf_max_delta_1p25": {
+      "human": 0.013536244368203498,
+      "f5tts": 0.013334420418404297,
+      "yourtts": -0.01315113924042402
+    },
+    "finding": "The 1.25-rate envelope change shares direction for human and F5-TTS, but YourTTS changes in the opposite direction; no universal AI-specific sign emerges. Some spectral shifts are comparable to the processed 1.0 control. Synthetic repeated-motif checks demonstrate sensitivity to repetition, not deepfake discrimination."
+  },
+  "scientific_assessment": {
+    "arithmetic_bug_found": false,
+    "label_leakage_in_feature_extraction_found": false,
+    "classification_improvement_demonstrated": false,
+    "cautions": [
+      "These 64 previously explored recordings and generator families are exploratory; speaker independence is unverified.",
+      "The 1.0 atempo control changes the waveform, so processing artifacts must be considered.",
+      "Within-recording autocorrelation can reflect speech rhythm, recording conditions or transform artifacts; no breath event is annotated.",
+      "No GPU detector scores, EER, ADS or official score are part of this pattern analysis."
+    ]
+  }
+}

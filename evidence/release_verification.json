@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-02T01:27:46.007663+00:00",
+  "local_python": "3.14.5",
+  "tests_run": 9,
+  "cpu_evidence_audit": {
+    "status": "passed",
+    "originals": 64,
+    "views": 256,
+    "scope": "CPU recomputation of archived raw-voice results; no fresh GPU or audio verification",
+    "files_checked": 16
+  },
+  "wrapper_recorded_score_replays": [
+    {
+      "id": "brep_human_test-00000-of-00002_00436",
+      "views_matched_by_pcm_hash": 4,
+      "mean_exact": true
+    },
+    {
+      "id": "brep_f5tts_test-00000-of-00007_00376",
+      "views_matched_by_pcm_hash": 4,
+      "mean_exact": true
+    },
+    {
+      "id": "brep_yourtts_test-00006-of-00007_00346",
+      "views_matched_by_pcm_hash": 4,
+      "mean_exact": true
+    }
+  ],
+  "fresh_gpu_inference": false,
+  "replay_scope": "Actual FFmpeg transforms matched archived PCM for 3 originals / 12 views; model scores replayed, not re-inferred"
+}

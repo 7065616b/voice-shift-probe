@@ -1,0 +1,133 @@
+{
+  "scope": "Exploratory full-source raw-waveform voice DF-Arena diagnostic; no PANNs/Demucs, no ADS or official validation",
+  "source_count": 64,
+  "variant_count": 256,
+  "protocol": "Fixed 0.8/1.0/1.25 atempo views; original control; frozen model; fixed threshold 0.5; equal-weight original/0.8/1.25 ensemble; no training or threshold tuning.",
+  "metrics": {
+    "original": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 28,
+      "false_negative": 0,
+      "true_negative": 4,
+      "false_positive_rate": 0.875,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5625,
+      "eer": 0.21875,
+      "auc": 0.912109375
+    },
+    "0.8": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 32,
+      "false_negative": 0,
+      "true_negative": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5,
+      "eer": 0.15625,
+      "auc": 0.923828125
+    },
+    "1.0": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 30,
+      "false_negative": 0,
+      "true_negative": 2,
+      "false_positive_rate": 0.9375,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.53125,
+      "eer": 0.21875,
+      "auc": 0.8994140625
+    },
+    "1.25": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 32,
+      "false_negative": 0,
+      "true_negative": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5,
+      "eer": 0.1875,
+      "auc": 0.8974609375
+    },
+    "predeclared_mean_original_0p8_1p25": {
+      "n": 64,
+      "real": 32,
+      "ai": 32,
+      "threshold": 0.5,
+      "true_positive": 32,
+      "false_positive": 32,
+      "false_negative": 0,
+      "true_negative": 0,
+      "false_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "balanced_accuracy": 0.5,
+      "eer": 0.15625,
+      "auc": 0.9423828125
+    }
+  },
+  "paired_score_shifts_vs_original": {
+    "0.8": {
+      "mean_absolute": 0.05384270008653402,
+      "max_absolute": 0.6002530157566071,
+      "mean_signed_real": 0.10637756437063217,
+      "mean_signed_ai": -0.00016892142593860626
+    },
+    "1.0": {
+      "mean_absolute": 0.02889902051538229,
+      "max_absolute": 0.356778621673584,
+      "mean_signed_real": 0.005894362926483154,
+      "mean_signed_ai": -2.0390376448631287e-05
+    },
+    "1.25": {
+      "mean_absolute": 0.06541433837264776,
+      "max_absolute": 0.6333599984645844,
+      "mean_signed_real": 0.13023528642952442,
+      "mean_signed_ai": 1.4275312423706055e-05
+    }
+  },
+  "prediction_elapsed_seconds": 235.51502063500402,
+  "segment_passes": 925,
+  "provenance": {
+    "prep_manifest_sha256": "640ca5b34ab254f80d1e38cd7d1606077f405b0d8cee9f052e187969f5f8d8cf",
+    "protocol_sha256": "f88fae097badc2004b36d01a247929797a0ec2f93237e983775ed51ca6a3b985",
+    "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+    "runner_sha256": "d8b58b778720838b0a19ca6db849a0c585e3e3647f0031dcb6b05b9a7691e2ab",
+    "baseline_script_sha256": "c17d776b7c17c2d70f1e55c2186ea54f0af8695dcdf07a106523cd80213aed9e",
+    "df_arena_weight_sha256": "780bc14fd4c15e65d58efdef728427cf03cd29cd60be528e97badf8c89087988",
+    "model_code_sha256": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modeling_antispoofing.py": "a7925c0ba67ef090552e0c337be6e6b3efffd53c3193e2310b30675af968c624",
+      "backbone.py": "397df32fb0b1a1296b292ec698e7edca44f98c5f2afe3655bf182ad01fa5a11c",
+      "conformer.py": "84651dc9e81aaf4a32b400a621aa37e8f22e656a8207c5f4120cbb6e682c5540",
+      "configuration_antispoofing.py": "dd4a40789c2383896ce743effdd48cb6cdbd2f01c4bcdd7d4b71d7fb92869cf7",
+      "config.json": "e9f6b651fb2f83d320b5e10b38bc104afdc57641839d16dd1b4921e9eae49a43"
+    }
+  },
+  "runtime_runs": [
+    {
+      "python": "3.11.15",
+      "numpy": "1.26.4",
+      "torch": "2.7.1+cu128",
+      "transformers": "4.57.6",
+      "gpu": "Tesla T4",
+      "cuda_runtime": "12.8",
+      "cudnn": 90701,
+      "float_precision": "FP32 with TF32 disabled"
+    }
+  ]
+}

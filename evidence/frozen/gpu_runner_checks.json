@@ -1,0 +1,32 @@
+{
+  "runner": "outputs/speed_probe_v1/gpu_inference.py",
+  "runner_sha256": "d8b58b778720838b0a19ca6db849a0c585e3e3647f0031dcb6b05b9a7691e2ab",
+  "prep_manifest_sha256": "640ca5b34ab254f80d1e38cd7d1606077f405b0d8cee9f052e187969f5f8d8cf",
+  "checks": {
+    "python_syntax": "passed",
+    "cli_help": "passed",
+    "baseline_archive_script_sha256": "c17d776b7c17c2d70f1e55c2186ea54f0af8695dcdf07a106523cd80213aed9e",
+    "baseline_archive_script_hash_match": "passed",
+    "manifest_and_all_wav_sha256": "passed",
+    "source_count": 64,
+    "class_counts": {
+      "real": 32,
+      "ai": 32
+    },
+    "view_count": 256,
+    "view_samples_total": 51544205,
+    "eer_perfect_fixture": 0.0,
+    "eer_inverted_fixture": 1.0,
+    "eer_tied_fixture": 0.5,
+    "auc_tied_fixture": 0.5,
+    "five_method_summary_fixture": "passed",
+    "atomic_json_and_csv_smoke": "passed",
+    "resume_from_valid_checkpoint": "passed",
+    "reject_changed_checkpoint_provenance": "passed",
+    "protocol_manifest_hash_and_fixed_settings": "passed",
+    "resume_reject_changed_protocol": "passed"
+  },
+  "runtime_status": "GPU model inference not run locally",
+  "runtime_limit": "The DF-Arena weight file is absent from this local extracted source directory; run on the GPU host with the frozen baseline_run and prepared WAV bundle. No official ADS, Demucs or PANNs inference is claimed.",
+  "protocol_sha256": "f88fae097badc2004b36d01a247929797a0ec2f93237e983775ed51ca6a3b985"
+}
